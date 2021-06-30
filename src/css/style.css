@@ -1,5 +1,5 @@
 $color-content-bg: #252526;
-$color-border: #363636;
+$color-border: #333333;
 $color-border-highlight: #656565;
 $color-table-dark-bg: #1e1e1e;
 $color-table-dark: #d4d4d4;
@@ -41,10 +41,14 @@ $color-highlight-2: #dcdcaa;
     font-family: initial;
 }
 
+.my-table th {
+    border: none;
+    border-bottom: 3px solid $color-border-highlight !important;
+}
+
 .my-table th > div{
     padding-top: .2rem;
     padding-bottom: .3rem;
-    vertical-align: bottom;
     line-height: 15px
 }
 .my-table th:nth-child(2n - 1) > div {
