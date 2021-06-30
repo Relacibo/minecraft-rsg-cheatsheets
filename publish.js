@@ -1,3 +1,7 @@
-import ghPages from 'gh-pages';
+const ghPages = require('gh-pages');
 
-ghPages.publish('dist', function(err) {});
+ghPages.publish('dist', function (err) {
+    if (err) {
+        console.trace();
+    }
+});
