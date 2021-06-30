@@ -1,8 +1,14 @@
-$color-highlight: #656565;
+$color-content-bg: #252526;
+$color-border: #363636;
+$color-border-highlight: #656565;
+$color-table-dark-bg: #1e1e1e;
+$color-table-dark: #d4d4d4;
+$color-highlight-1: #d16969;
+$color-highlight-2: #dcdcaa;
 
 .content {
     overflow: scroll;
-    background-color: #202022;
+    background-color: $color-content-bg;
     min-width: 100vw;
     min-height: 100vh;
     position: relative;
@@ -10,47 +16,61 @@ $color-highlight: #656565;
     font-size: 30px;
 }
 
+.table-dark {
+    background-color: $color-table-dark-bg;
+    color: $color-table-dark;
+}
+
 .my-table-container {
-    margin: 0;
-    padding: 5px;
     width: fit-content;
     height: fit-content;
     position: absolute;
-    top: 1vh;
-    right: 1vw;
+    left: 10vw;
 }
 
 .my-table {
     margin: 0;
+    border-collapse: separate;
+    border-spacing: 0;
     border-radius: 10px;
-    border: 5px solid $color-highlight;
+    border: 5px solid $color-border-highlight;
+    text-align: center;
+}
+
+.my-table thead {
+    font-family: initial;
+}
+
+.my-table th > div{
+    padding-top: .2rem;
+    padding-bottom: .3rem;
+    vertical-align: bottom;
+    line-height: 15px
+}
+.my-table th:nth-child(2n - 1) > div {
+    padding-top: .1rem;
+    padding-bottom: .4rem;
 }
 
 .my-table :is(tr, td) {
-    text-align: center;
-    border-color: $color-highlight;
+    border-color: $color-border-highlight;
     padding-top: 0;
     padding-bottom: 0;
-}
-
-.my-table th {
-    border-color: $color-highlight !important;
-    border-top: none;
 }
 
 .my-table td {
     width: 4.5rem;
     vertical-align: baseline;
     border: none;
-    border-color: $color-highlight;
+    border-color: $color-border-highlight;
 }
 
 .my-table td:first-child() {
-    border-left: 2px solid $color-highlight;
+    border-left: 2px solid $color-border-highlight;
 }
 
 .my-table td:nth-child(2n - 1) {
-    border-right: 2px solid #3e3e40;
+    border-right: 2px solid $color-border;
 }
 
 .my-table td:nth-child(2n):nth-last-child(n+2) {
@@ -60,4 +80,12 @@ $color-highlight: #656565;
 
 .my-table tr:first-child() td:nth-child(-n+4) {
     border-bottom: 5px solid;
+}
+
+.highlight-1 {
+    color: $color-highlight-1;
+}
+
+.highlight-2 {
+    color: $color-highlight-2;
 }
