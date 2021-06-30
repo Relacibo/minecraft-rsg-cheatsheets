@@ -1,3 +1,4 @@
+$color-site-bg: #404040;
 $color-content-bg: #252526;
 $color-border: #333333;
 $color-border-highlight: #656565;
@@ -6,14 +7,24 @@ $color-table-dark: #d4d4d4;
 $color-highlight-1: #d16969;
 $color-highlight-2: #dcdcaa;
 
+body {
+    overflow-x: hidden;
+}
+
+.site {
+    background-color: $color-site-bg;
+}
+
 .content {
-    overflow: scroll;
     background-color: $color-content-bg;
-    min-width: 100vw;
-    min-height: 100vh;
+    overflow-y: scroll;
+    width: 100vw;
+    height: 100vh;
     position: relative;
     font-family: 'Inconsolata', monospace;
     font-size: 30px;
+    padding: 0;
+    margin: 0;
 }
 
 .table-dark {
@@ -92,4 +103,9 @@ $color-highlight-2: #dcdcaa;
 
 .highlight-2 {
     color: $color-highlight-2;
+}
+
+.control {
+    width: 100vw;
+    height: 20vw;
 }
